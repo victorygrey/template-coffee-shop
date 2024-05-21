@@ -112,30 +112,17 @@ body {
         background-color: #fff;
         width: 30rem;
         height: 100vh;
+        transition: 0.5s;
+    }
+    .navbar .navbar-nav.active {
+        right: 0;
     }
     .navbar .navbar-nav a {
-        font-size: 1.2rem;
-        margin: 1rem 0;
-    }
-    .navbar .navbar-nav a:hover {
         color: var(--primary);
-    }
-    .navbar .navbar-nav a::after {
-        display: none;
-    }
-    .navbar .navbar-nav a:hover::after {
-        display: none;
-    }
-    .navbar .navbar-extra {
-        position: absolute;
-        top: 100%;
-        right: -100%;
-        background-color: #fff;
-        width: 30rem;
-        height: 100vh;
-    }
-    .navbar .navbar-extra .active {
-        right: 0;
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 2rem;
     }
 }
 
