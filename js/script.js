@@ -37,4 +37,14 @@ document.addEventListener('click', function(e) {
     if (!sc.contains(e.target) &&!shoppingCart.contains(e.target)) {
         shoppingCart.classList.remove('active');
     }
-})
+});
+
+// Modal Box
+
+const itemDetailModal = document.querySelector('#item-detail-modal');
+const itemDetailButton = document.querySelector('.item-detail-button');
+
+itemDetailButton.onclick = (e) => {
+    itemDetailModal.style.display = 'flex';
+    e.preventDefault();
+}
