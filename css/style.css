@@ -495,11 +495,11 @@ footer .credit a {
     padding: 1.2rem;
     border: 1px solid #666;
     width: 80%;
-    animation: slidoToBottom 0.5s;
+    animation: slideToBottom 0.5s;
 }
 
 /* Modal Animation */
-@keyframes slidoToBottom {
+@keyframes slideToBottom {
     form {
         top: -300px;
         opacity: 0;
