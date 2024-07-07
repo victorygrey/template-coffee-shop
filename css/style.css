@@ -475,6 +475,7 @@ footer .credit a {
 /* Modal Box Section */
 /* Item Detail */
 
+
 .modal {
     display: none;
     position: fixed;
@@ -487,7 +488,8 @@ footer .credit a {
     background-color: rgba(0, 0, 0, 0.6);
 }
 
-.modal .modal-container {
+
+.modal-container {
     position: relative;
     background-color: #fefefe;
     color: var(--bg);
@@ -495,12 +497,12 @@ footer .credit a {
     padding: 1.2rem;
     border: 1px solid #666;
     width: 80%;
-    animation: slideToBottom 0.5s;
+    animation: animateModal 0.5s;
 }
 
 /* Modal Animation */
-@keyframes slideToBottom {
-    form {
+@keyframes animateModal {
+    from {
         top: -300px;
         opacity: 0;
     }
@@ -510,29 +512,29 @@ footer .credit a {
     }
 }
 
-.modal .modal-container .close-icon {
+.modal-container .close-icon {
     position: absolute;
     right: 1rem;
 }
 
-.modal .modal-container .modal-content {
+.modal-content {
     display: flex;
     flex-wrap: nowrap;
 }
 
-.modal .modal-container .modal-content img {
+.modal-content img {
     height: 20rem;
     margin-right: 2rem;
     margin-bottom: 2rem;
 }
 
-.modal .modal-container .modal-content .product-content p {
+.modal-content .product-content p {
     font-size: 1.2rem;
     line-height: 1.8rem;
     margin-top: 1.2rem;
 }
 
-.modal .modal-container .modal-content .product-content a {
+.modal-content .product-content a {
     display: flex;
     gap: 1rem;
     width: 12rem;
