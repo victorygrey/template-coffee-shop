@@ -234,7 +234,7 @@ body {
 }
 
 .form-container span {
-  text-align: right;  
+  text-align: right;
 }
 
 .form-container input {
@@ -265,14 +265,10 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  -webkit-mask-image: linear-gradient(
-    rgba(0,0,0,1) 85%, 
-    rgba(0,0,0,0)
-    );
-  mask-image: linear-gradient(
-    rgba(0,0,0,1) 85%, 
-    rgba(0,0,0,0)
-    );
+  -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 1) 85%,
+      rgba(0, 0, 0, 0));
+  mask-image: linear-gradient(rgba(0, 0, 0, 1) 85%,
+      rgba(0, 0, 0, 0));
 }
 
 /* .hero::after {
@@ -635,6 +631,7 @@ footer .credit a {
     top: -300px;
     opacity: 0;
   }
+
   to {
     top: 0;
     opacity: 1;
@@ -689,9 +686,11 @@ footer .credit a {
   html {
     font-size: 62.5%;
   }
+
   #hamburger-menu {
     display: inline-block;
   }
+
   .navbar .navbar-nav {
     position: absolute;
     top: 100%;
@@ -701,9 +700,11 @@ footer .credit a {
     height: 100vh;
     transition: 0.5s;
   }
+
   .navbar .navbar-nav.active {
     right: 0;
   }
+
   .navbar .navbar-nav a {
     color: var(--primary);
     display: block;
@@ -711,9 +712,11 @@ footer .credit a {
     padding: 0.5rem;
     font-size: 2rem;
   }
+
   .navbar .navbar-nav a::after {
     transform-origin: 0 0;
   }
+
   .navbar .navbar-nav a:hover::after {
     transform: scaleX(0.2);
   }

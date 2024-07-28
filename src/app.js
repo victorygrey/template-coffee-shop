@@ -18,7 +18,7 @@ document.addEventListener('alpine:init', () => {
 
             // jika belum ada / cart masih kosong
             if (!cartItem) {
-                this.items.push({ ...newItem, qty: 1, total: newItem.price});
+                this.items.push({ ...newItem, qty: 1, total: newItem.price });
                 this.qty++;
                 this.total += newItem.price;
             } else {
@@ -48,7 +48,7 @@ document.addEventListener('alpine:init', () => {
                 // telusuri 1 per 1
                 this.items = this.items.map((item) => {
                     // jika bukan barang yang di klik
-                    if (item.id!== id) {
+                    if (item.id !== id) {
                         return item;
                     } else {
                         // jika barang nya lebih dari 1
@@ -61,7 +61,7 @@ document.addEventListener('alpine:init', () => {
                 });
             } else if (cartItem.qty === 1) {
                 // jika barang nya sisa 1
-                this.items = this.items.filter((item) => item.id!== id);
+                this.items = this.items.filter((item) => item.id !== id);
                 this.qty--;
                 this.total -= cartItem.price;
             }
@@ -72,7 +72,7 @@ document.addEventListener('alpine:init', () => {
 // Mata Uang Indonesia
 const rupiah = (number) => {
     return new Intl.NumberFormat('id-ID', {
-        style: 'currency', 
+        style: 'currency',
         currency: 'IDR',
         minimumFractionDigits: 0
     }).format(number);
