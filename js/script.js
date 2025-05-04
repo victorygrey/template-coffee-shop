@@ -1,21 +1,30 @@
 // Toggle class active Hamburger
 const navbarNav = document.querySelector(".navbar-nav");
 // ketika hamburger-menu di klik
-document.querySelector("#hamburger-menu").onclick = (e) => {
-  navbarNav.classList.toggle("active");
-  e.preventDefault();
-};
+const hamburgerMenu = document.querySelector("#hamburger-menu");
+if (hamburgerMenu) {
+  hamburgerMenu.onclick = (e) => {
+    navbarNav.classList.toggle("active");
+    e.preventDefault();
+  };
+}
 
 // Toggle class active Search Form
-const searchForm = document.querySelector(".search-form");
-const searchBox = document.querySelector("#search-box");
-// ketika search-icon di klik
-document.querySelector("#search-button").onclick = (e) => {
-  searchForm.classList.toggle("active");
-  searchBox.focus();
-  e.preventDefault();
-};
-
+const searchButton = document.querySelector("#search-button");
+if (searchButton) {
+  searchButton.onclick = (e) => {
+    searchForm.classList.toggle("active");
+    searchBox.focus();
+    e.preventDefault();
+  };
+}
+const shoppingCartButton = document.querySelector("#shopping-cart");
+if (shoppingCartButton) {
+  shoppingCartButton.onclick = (e) => {
+    shoppingCart.classList.toggle("active");
+    e.preventDefault();
+  };
+}
 // Toggle class active Shopping Cart
 const shoppingCart = document.querySelector(".shopping-cart");
 document.querySelector("#shopping-cart").onclick = (e) => {
@@ -37,19 +46,20 @@ document.addEventListener("click", function (e) {
   }
   if (!sc.contains(e.target) && !shoppingCart.contains(e.target)) {
     shoppingCart.classList.remove("active");
-  }
-});
+}
 
 // Modal Box
 
 const itemDetailModal = document.querySelector("#item-detail-modal");
 const itemDetailButtons = document.querySelectorAll(".item-detail-button");
 
-itemDetailButtons.forEach((btn) => {
-  btn.onclick = (e) => {
-    itemDetailModal.style.display = "flex";
+const closeIcon = document.querySelector(".modal .close-icon");
+if (closeIcon) {
+  closeIcon.onclick = (e) => {
+    itemDetailModal.style.display = "none";
     e.preventDefault();
-  }
+  };
+}
 });
 
 // klik tombol close

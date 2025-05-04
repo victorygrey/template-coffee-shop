@@ -46,23 +46,23 @@
 
     <!-- Search Form Start -->
     <div class="search-form">
-      <input type="search" name="seach-box" id="search-box" placeholder="search here..." />
+      <input type="search" name="search-box" id="search-box" placeholder="search here..." />
       <label for="search-box"><i data-feather="search"></i></label>
     </div>
     <!-- Search Form End -->
 
     <!-- Shopping Cart Start -->
     <div class="shopping-cart">
-      <template x-for="(item, index) in $store.cart.items" x-key="index">
+      <template x-for="(item, index) in $store.cart.items" :key="index">
         <div class="cart-item">
-          <img :src="`img/products/${item.img}`" alt="item.name" />
+          <img :src="`img/products/${item.img}`" :alt="item.name" />
           <div class="item-detail">
             <h3 x-text="item.name"></h3>
             <div class="item-price">
               <span x-text="rupiah(item.price)"></span> &times;
-              <button id="remove" @click.prevent="$store.cart.remove(item.id)">&minus;</button>
+              <button class="remove-btn" @click.prevent="$store.cart.remove(item.id)">&minus;</button>
               <span x-text="item.qty"></span>
-              <button id="add" @click.prevent="$store.cart.add(item)">&plus;</button> &equals;
+              <button class="add-btn" @click.prevent="$store.cart.add(item)">&plus;</button> &equals;
               <span x-text="rupiah(item.total)"></span>
             </div>
           </div>
@@ -195,7 +195,7 @@
     </p>
 
     <div class="row">
-      <template x-for="(item, index) in items" x-key="index">
+      <template x-for="(item, index) in items" :key="index">
         <div class="product-card">
           <div class="product-icons">
             <a href="#" @click.prevent="$store.cart.add(item)">
@@ -215,7 +215,7 @@
             <img :src="`img/products/${item.img}`" :alt="`${item.name}`" />
           </div>
           <div class="product-content">
-            <h3 x-text="item.name">Coffee beans 1</h3>
+            <h3 x-text="item.name"></h3>
           </div>
           <div class="product-stars">
             <svg width="24" height="24" fill="currentColor" stroke="currentColor" stroke-width="2"
@@ -301,7 +301,11 @@
     <div class="row">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15843.895148418023!2d107.7044087!3d-6.893738749999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68dd16dcf206bd%3A0x9cf7627aa7ec11ea!2sJl.%20Karang%20Pasundan%20III%20No.16%2C%20Jatiendah%2C%20Kec.%20Cilengkrang%2C%20Kabupaten%20Bandung%2C%20Jawa%20Barat%2040166!5e0!3m2!1sid!2sid!4v1720100028685!5m2!1sid!2sid"
-        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        class="map">
+      </iframe>
 
       <form action="">
         <div class="input-group">
@@ -332,11 +336,11 @@
 
     <div class="links">
       <a href="#home">Home</a>
-      <a href="#about">Tentang Kami</a>
+      <a href="#about">About</a>
       <a href="#menu">Menu</a>
       <a href="#contact">Kontak</a>
     </div>
-
+      <p>Created by <a href="#">Victorygrey</a>. | &copy; 2024.</p>
     <div class="credit">
       <p>Created by <a href="">Victorygrey</a>. | &copy; 2024.</p>
     </div>
@@ -373,9 +377,7 @@
   <!-- Modal Box Item Detail End -->
 
   <!-- Script Feather Icons -->
-  <script>
-    feather.replace();
-  </script>
+  <script src="js/feather-icons-init.js"></script>
   <!-- My Javascript -->
   <script src="js/script.js"></script>
 </body>

@@ -195,15 +195,7 @@ body {
   text-align: center;
 }
 
-/* .shopping-cart .cart-item .remove-item {
-  position: absolute;
-  right: 1rem;
-  cursor: pointer;
-}
-
-.shopping-cart .cart-item .remove-item:hover {
-  color: var(--primary);
-} */
+/* Removed unused styles for .shopping-cart .cart-item .remove-item */
 
 /* Checkout Form */
 
@@ -278,26 +270,13 @@ body {
   width: 100%;
   height: 30%;
   bottom: 0;
-  background: linear-gradient(
-    0deg,
-    rgba(1, 1, 3, 1) 8%,
-    rgba(255, 255, 255, 0) 50%
-  );
-} */
-
-.hero .mask-container {
-  position: absolute;
-  /* background: salmon; */
-  inset: 0;
-  mask-image: url('../img/header-bg.svg');
-  mask-repeat: no-repeat;
-  mask-size: cover;
+  background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   mask-position: center;
   -webkit-mask-image: url('../img/header-bg.svg');
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-size: cover;
   -webkit-mask-position: center;
-}
+} */
 
 .hero .content {
   padding: 1.4rem 7%;
@@ -525,12 +504,7 @@ body {
   width: 100%;
   object-fit: cover;
 }
-
-.contact .row form {
-  flex: 1 1 45rem;
-  padding: 5rem 2rem;
-  text-align: center;
-}
+/* Removed unused styles for .products .product-price span */
 
 .contact .row form .input-group {
   display: flex;

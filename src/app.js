@@ -43,6 +43,11 @@ document.addEventListener('alpine:init', () => {
             // ambil item yang mau di remove
             const cartItem = this.items.find((item) => item.id === id);
 
+            // jika item tidak ditemukan
+            if (!cartItem) {
+                return;
+            }
+
             // jika item lebih dari 1
             if (cartItem.qty > 1) {
                 // telusuri 1 per 1
