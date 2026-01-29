@@ -247,6 +247,11 @@ body {
   cursor: pointer;
 }
 
+.form-container .checkout-button.disabled {
+  background-color: #999 !important;
+  cursor: not-allowed;
+}
+
 /* Hero Section */
 
 .hero {
@@ -257,10 +262,8 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 1) 85%,
-      rgba(0, 0, 0, 0));
-  mask-image: linear-gradient(rgba(0, 0, 0, 1) 85%,
-      rgba(0, 0, 0, 0));
+  -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0));
+  mask-image: linear-gradient(rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0));
 }
 
 /* .hero::after {
@@ -283,8 +286,8 @@ body {
   /* max-width: 60rem; */
   width: 100%;
   text-align: center;
-  position: fixed;
-  top: 150px;
+  position: absolute;
+  top: 30%;
 }
 
 .hero .content h1 {
@@ -353,11 +356,11 @@ body {
 
 .about .row .about-img img {
   width: 100%;
-  -webkit-mask-image: url('../img/items/coffee-beans.svg');
+  -webkit-mask-image: url("../img/items/coffee-beans.svg");
   -webkit-mask-size: 50%;
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: center;
-  mask-image: url('../img/items/coffee-beans.svg');
+  mask-image: url("../img/items/coffee-beans.svg");
   mask-size: 50%;
   mask-repeat: no-repeat;
   mask-position: center;
@@ -584,19 +587,20 @@ footer .credit a {
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
   background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-container {
   position: relative;
   background-color: #fefefe;
   color: var(--bg);
-  margin: 15% auto;
   padding: 1.2rem;
   border: 1px solid #666;
   width: 80%;
-  animation: animateModal 0.5s;
+  max-width: 800px;
 }
 
 /* Modal Animation */
